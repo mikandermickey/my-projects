@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/react";
+import "./index.css";
+import CalculatorApp from "./Projects/Calculator/CalculatorApp";
+import Insta from "./Projects/CloneApp.js/Insta";
+import VejrApp from "./Projects/VejrApp/VejrApp";
+import CRUDapp from "./Projects/CRUD/CRUDapp";
 
 function App() {
+  const heading = css`
+    text-align: center;
+  `;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="App">
+        <h1 css={heading}>Heres some of my sandbox projects</h1>
+        <div className="App-container">
+          <Insta />
+          <VejrApp />
+          <CalculatorApp />
+        </div>
+        <CRUDapp />
+      </div>
+    </>
   );
 }
 
